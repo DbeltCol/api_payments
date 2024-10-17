@@ -1,0 +1,24 @@
+1. clone repository https://github.com/thecaringdeveloper/laravel-docker-boilerplate/tree/main
+	git clone git@github.com:thecaringdeveloper/laravel-docker-boilerplate.git
+2. run docker-compose up
+3. execute composer to create project
+	docker-compose run composer create-project laravel/laravel example "11.*" --prefer-dist
+4. move laravel project to parent to have everything t same level
+	mv ./name_project/* ./
+5. if is laravel 10 or 11 configure php version and remove version from docker-compose.yml, remove images containers and volumes and execute docker-compose .yml
+6. install java
+	sudo apt update && sudo apt install openjdk-8-jdk openjdk-8-doc openjdk-8-source
+7. install jenkins
+	sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  	https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+	echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+	  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+	  /etc/apt/sources.list.d/jenkins.list > /dev/null
+	sudo apt-get update
+	sudo apt-get install jenkins
+
+8. get password
+	//pass bb09f7ae161e47f180da7a311985b7cd
+
+
+
